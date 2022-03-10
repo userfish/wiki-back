@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 100MB
+      max-file-size: 20MB
+      file-size-threshold: 20MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://1.15.147.111:3306/wiki?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true&serverTimezone=Asia/Shanghai
+    username: "root"
+    password: "Zhouzhx@1"
+
+
+
+server:
+  port: 18080
+
+###################  mybatis-plus配置  ###################
+mybatis-plus:
+  mapper-locations: classpath:/mappers/**/*.xml
+  type-aliases-package: com.blog.wiki.demo.entity
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  page-size-zero: true
+  params: count=countSql
+
+
+logging:
+  config: classpath:log4j2-test.xml
+
