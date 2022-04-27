@@ -105,15 +105,9 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.ctyun</groupId>
-            <artifactId>gb-sdk-core</artifactId>
-            <version>0.0.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>cn.ctyun</groupId>
-            <artifactId>gb-sdk-vss</artifactId>
-            <version>0.0.5</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.2.4.RELEASE</version>
         </dependency>
 
 
